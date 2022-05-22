@@ -1,0 +1,62 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+    <p>
+        Enter Color:<input type="text" id="t1">
+    </p>
+
+    <p>
+        <input type="button" value="add at last" onclick="addlast()" />
+        <input type="button" value="add at first" onclick="addfirst()" />
+        <input type="button" value="remove last element" onclick="removelast()" />
+        <input type="button" value="remove first element" onclick="removefirst()" />
+
+        <script>
+
+
+            var colors = ["red", "blue", "green", "black"];
+
+            var data = "";
+           
+            function display() {
+                data = "";
+                data += "<ol>";
+                for (let i = 0; i < colors.length; i++) {
+                    data += "<li>" + colors[i] + "</li>";
+                }
+
+                data += "</ol>";
+                console.log(data);
+                document.getElementById("d1").innerHTML = data;
+            }
+            //console.log(data);
+           
+            function addfirst() {
+                colors.unshift(document.getElementById("t1").value);
+
+                display();
+            }
+
+            function addlast() {
+                colors.push(document.getElementById("t1").value);
+                display();
+            }
+
+            function removefirst() {
+                colors.shift();
+                display();
+            }
+
+            function removelast() {
+                colors.pop();
+                display();
+            }
+
+            display();
+        </script>
+</body>
+
+</html>
