@@ -1,0 +1,61 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+
+    <div class="login">
+        <form action="login.html">
+
+            <p>
+                <label for="Input2" class="form-label">Email address</label>
+                <input type="email" required class="form-control" id="Input2" placeholder="name@example.com">
+            </p>
+            <p>
+                <label for="Input3" class="form-label">Password</label>
+                <input type="password" required class="form-control" id="Input3" placeholder="password">
+            </p>
+
+            <small id="error" style="color: red;"></small>
+            <p>
+                <button type="submit" class="btn btn-outline-primary"
+                        onclick="return validateUser()">
+                    Login
+                </button>
+            </p>
+
+        </form>
+    </div>
+
+
+
+
+
+
+    <script>
+
+        function validateUser() {
+            // save email & pass which is entered in textboxes by the user
+            var emailId = document.getElementById("Input1").value;
+            var password = document.getElementById("Input2").value;
+            // get the email & pass from the localstorage
+            var email = localStorage.getItem("emailid");
+            var pass = localStorage.getItem("password");
+            if (emailId == email && password == pass) {
+                alert("Success !");
+                return true;
+            }
+            else {
+                alert("Fail to login");
+                return false;
+            }
+        }
+    </script>
+
+
+
+
+</body> 
+ </html>

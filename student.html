@@ -1,0 +1,30 @@
+<html>
+
+<body>
+
+    <div id="d1"></div>
+    <script>
+
+     
+
+        const student = {
+            name: "chaitali",
+            roll: 1,
+            science: 95,
+            hindi: 99,
+            maths: 95,
+            percent: function () {
+                return ((this.science + this.hindi + this.maths) / 300) * 100;
+            },
+            display: function () {
+                return "roll no: " + this.roll + "Name: " + this.name + "percentage " + this.percent();
+            }
+
+        }
+
+        document.getElementById("d1").innerHTML = student.display();
+
+    </script>
+</body>
+
+</html>
