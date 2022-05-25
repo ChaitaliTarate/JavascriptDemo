@@ -1,0 +1,37 @@
+<html>
+<body>
+    <div id="d1"></div>
+    <script>
+
+        const Students =
+         [
+            {
+                 roll: 1,
+                 Name: "Chaitali",
+                perc: 90.00
+            },
+
+           {
+               roll: 2,
+               Name: "pooja",
+               perc: 80.00
+            },
+
+                {
+                    roll: 3,
+                    Name: "shivani",
+                    perc: 85.00
+                }
+            ]
+      //  document.getElementById("d1").innerHTML = employees[2].firstname + " " + employees[2].lastname + " " + employees[2].city;
+        var data = "<table border='1'><tr><th>Roll No</th><th>Name</th><th>Percentage</th></tr>";
+        for (let i = 0; i < Students.length; i++) {
+            data += "<tr><td>" + Students[i].roll + "</td><td>" + Students[i].Name + "</td><td>" + Students[i].perc + "</td></tr>";
+
+        }
+        data += "</table>";
+        document.getElementById("d1").innerHTML = data;
+
+    </script>
+</body>
+</html>

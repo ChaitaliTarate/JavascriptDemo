@@ -1,0 +1,104 @@
+<html>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script>
+
+        const employees =
+            [
+                {
+                    firstname: "rohit",
+                    lastname: "patil",
+                    city: "pune"
+                },
+
+                {
+                    firstname: "rohan",
+                    lastname: "patil",
+                    city: "pune"
+                },
+
+                {
+                    firstname: "rahul",
+                    lastname: "patil",
+                    city: "pune"
+                }
+            ]
+        //  document.getElementById("d1").innerHTML = employees[2].firstname + " " + employees[2].lastname + " " + employees[2].city;
+        var data = "<table border='1'><tr><th>First Name</th><th>Last Name</th><th>City</th></tr>";
+        for (let i = 0; i < employees.length; i++) {
+            data += "<tr><td>" + employees[i].firstname + "</td><td>" + employees[i].lastname + "</td><td>" + employees[i].city + "</td></tr>";
+
+        }
+        data += "</table>";
+        document.getElementById("d1").innerHTML = data;
+
+
+
+
+        const Students =
+            [
+                {
+                    roll: 1,
+                    Name: "Chaitali",
+                    perc: 90.00
+                },
+
+                {
+                    roll: 2,
+                    Name: "pooja",
+                    perc: 80.00
+                },
+
+                {
+                    roll: 3,
+                    Name: "shivani",
+                    perc: 85.00
+                }
+            ]
+        //  document.getElementById("d1").innerHTML = employees[2].firstname + " " + employees[2].lastname + " " + employees[2].city;
+        var data = "<table border='1'><tr><th>Roll No</th><th>Name</th><th>Percentage</th></tr>";
+        for (let i = 0; i < Students.length; i++) {
+            data += "<tr><td>" + Students[i].roll + "</td><td>" + Students[i].Name + "</td><td>" + Students[i].perc + "</td></tr>";
+
+        }
+        data += "</table>";
+        document.getElementById("d2").innerHTML = data;
+
+
+
+
+        const Products =
+            [
+                {
+                    id: 1,
+                    Name: "Pen",
+                    price: 90
+                },
+
+                {
+                    id: 2,
+                    Name: "Pencil",
+                    price: 50
+                },
+
+                {
+                    id: 3,
+                    Name: "soap",
+                    price: 200
+                }
+            ]
+        //  document.getElementById("d1").innerHTML = employees[2].firstname + " " + employees[2].lastname + " " + employees[2].city;
+        var data = "<table border='1'><tr><th>Product Id</th><th>Product Name</th><th>Price</th></tr>";
+        for (let i = 0; i < Products.length; i++) {
+            data += "<tr><td>" + Products[i].id + "</td><td>" + Products[i].Name + "</td><td>" + Products[i].price + "</td></tr>";
+
+        }
+        data += "</table>";
+        document.getElementById("d3").innerHTML = data;
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+    <div id="d1"></div>
+    <script>
+
+        //call back functioon is pass an argumenyt to the function
+        //first add() finishes its execution & then add() give a call to the call back function
+        //i.e display()
+
+        function add(a, b,mycallback) {
+            let sum = a + b;
+            mycallback(sum);
+        }
+        function display(sum) {
+            document.getElementById("d1").innerHTML = "Addition is " + sum;
+        }
+
+        add(40, 60, display);
+
+
+        function depts(emplist) {
+            emplist(deptlist);
+        }
+
+        function displayemps(deptlist) {
+
+        }
+
+    </script>
+</body>
+</html>

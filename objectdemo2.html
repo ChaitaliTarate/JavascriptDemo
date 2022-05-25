@@ -1,0 +1,33 @@
+<html>
+<body>
+    <div id="d1"></div>
+    <script>
+
+
+        const employee = {
+            firstName: "Test",
+            lastname:"Test 1",
+
+            age: 30,
+            fullName: function () {
+                return this.firstName + " " + this.lastname;
+            }
+        }
+
+        const member = {
+            firstName: "User1",
+            lastname: "User"
+        }
+
+        //document.getElementById("d1").innerHTML = employee.fullName.call(member,"pune","india");
+
+        // document.getElementById("d1").innerHTML = employee.fullName.apply(member,["pune", "india"]);
+        let empinfo = employee.fullName.bind(member);
+
+        document.getElementById("d1").innerHTML = empinfo();
+
+
+
+    </script>
+</body>
+</html>
